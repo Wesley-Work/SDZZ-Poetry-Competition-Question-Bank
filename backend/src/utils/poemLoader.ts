@@ -11,5 +11,5 @@ interface Poem {
 }
 
 export async function loadPoems(): Promise<Poem[]> {
-  return poemsData.poems;
+  return poemsData;
 }
