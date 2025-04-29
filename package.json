@@ -10,10 +10,6 @@
     "clean": "pnpm -r clean"
   },
   "packageManager": "pnpm@9.5.0",
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
   "devDependencies": {
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
