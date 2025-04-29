@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import cors from '@koa/cors';
 import bodyParser from 'koa-bodyparser';
-import poemsRouter from './routes/poems_v2';
+import poemsRouter from './routes/getPoems';
 
 const app = new Koa();
 
@@ -15,6 +15,10 @@ app.use(poemsRouter.allowedMethods());
 
 // 错误处理
 app.on('error', (err, ctx) => {
+  ctx.body = {
+    code: 500,
+    message: '服务器内部错误：' + err,
+  };
   console.error('server error', err);
 });
 

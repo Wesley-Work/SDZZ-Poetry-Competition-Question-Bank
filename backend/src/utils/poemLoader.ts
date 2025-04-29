@@ -1,4 +1,5 @@
 import poemsData from '../data/poems_v2.json';
+import poemsSentencesData from '../data/poemsSentencesList.json';
 
 interface Poem {
   id: number;
@@ -12,4 +13,8 @@ interface Poem {
 
 export async function loadPoems(): Promise<Poem[]> {
   return poemsData;
+}
+
+export async function loadPoemsSentences(): Promise<Poem[]> {
+  return poemsSentencesData;
 }
